@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saleh S. Mukhrish - Product & Growth Strategist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles to ensure Inter is used and for smooth transitions */
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        /* Custom class for monospace font */
+        .font-mono {
+            font-family: 'IBM Plex Mono', monospace;
+        }
+        /* Style the scrollbar in dark mode */
+        body.dark-mode {
+            scrollbar-color: #1f2937 #000000; /* thumb track */
+        }
+        body.dark-mode::-webkit-scrollbar {
+            width: 8px;
+        }
+        body.dark-mode::-webkit-scrollbar-track {
+            background: #000000;
+        }
+        body.dark-mode::-webkit-scrollbar-thumb {
+            background-color: #1f2937;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body class="dark-mode min-h-screen bg-black text-white transition-colors duration-300">
+
+    <div id="app-container">
+        
+        <header id="main-header" class="fixed top-0 w-full bg-black/80 backdrop-blur-md border-b border-gray-800 z-50 transition-colors duration-300">
+            <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+                <div class="text-sm font-mono font-semibold">Saleh S. Mukhrish</div>
+                <div class="flex items-center gap-6">
+                    <nav class="hidden md:flex gap-8 text-sm">
+                        <a href="#work" class="text-gray-400 hover:text-blue-500 transition font-medium">WORK</a>
+                        <a href="#capabilities" class="text-gray-400 hover:text-blue-500 transition font-medium">CAPABILITIES</a>
+                        <a href="#experience" class="text-gray-400 hover:text-blue-500 transition font-medium">EXPERIENCE</a>
+                        <a href="#contact" class="text-gray-400 hover:text-blue-500 transition font-medium">CONTACT</a>
+                    </nav>
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-900 border border-gray-800 hover:border-blue-500 transition">
+                        <svg id="moon-icon" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                        <svg id="sun-icon" class="w-5 h-5 hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <section class="mt-20 border-b border-gray-800 py-8 px-6 transition-colors duration-300" id="greeting-banner">
+            <div class="max-w-7xl mx-auto flex justify-between items-center flex-col sm:flex-row">
+                <div>
+                    <h2 class="text-3xl font-bold mb-2"><span id="greeting-text">Good Evening</span>! 👋</h2>
+                    <p class="text-gray-400">Thanks for visiting my portfolio</p>
+                </div>
+                <div class="text-right text-gray-400 mt-4 sm:mt-0">
+                    <div class="flex items-center gap-2 justify-end mb-1">
+                        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        <span class="font-mono text-sm">Saudi Arabia</span>
+                    </div>
+                    <div class="font-mono text-xl" id="current-time"></div>
+                    <div class="text-xs font-mono mt-1" id="current-date"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-6 px-6 text-left border-b border-gray-800 transition-colors duration-300" id="availability-badge">
+            <div class="inline-flex items-center gap-3 px-4 py-1.5 bg-green-900/40 border border-green-700 rounded-full">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                </span>
+                <span class="text-sm font-medium text-green-300 tracking-wider uppercase">Open for Opportunities</span>
+            </div>
+        </section>
+
+        <section class="min-h-[70vh] flex items-left justify-left px-6">
+            <div class="max-w-4xl text-left py-20">
+                <h1 class="text-5xl sm:text-7xl md:text-8xl font-extrabold mb-6 leading-tight">
+                    Product & Operations Lead
+                    <p class="text-xl sm:text-5xl text-gray-400 font-light">Driving Scalable Growth Across E-Commerce and On-Demand Platforms</p>
+                </h1>
+                
+                <div class="flex flex-wrap items-left justify-left gap-4 text-sm font-mono text-gray-400 mb-8">
+                    <span>SAUDI ARABIA & GCC</span>
+                    <span>•</span>
+                    <span>EST. GMT +3</span>
+                    <span>•</span>
+                    <span class="text-green-400">● AVAILABLE</span>
+                </div>
+
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">
+                    Product strategist and operations leader with 10+ years of experience bridging product lifecycle execution with operational excellence. 
+                    Expert in on-demand logistics, marketplace dynamics, and digital retail systems, delivering measurable impact in customer retention, LTV growth, and cost optimization. 
+                    I design scalable frameworks, lead cross-functional teams, and build data-driven products that convert efficiently — online and at point of sale.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a 
+                        href="#work" 
+                        class="px-8 py-4 bg-white text-black font-semibold rounded-lg hover:opacity-80 transition flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
+                    >
+                        VIEW MY WORK
+                        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                    </a>
+                    <a 
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=sal.mukhrish@gmail.com&su=Inquiry%3A%20Product%20%2F%20Operations%20Role%20at%20%5BCompany%20Name%5D&body=Hi%20Saleh%2C%0D%0A%0D%0AI%20am%20a%20%5BJob%20Title%2C%20e.g.%2C%20Talent%20Acquisition%20Specialist%5D%20at%20%5BCompany%20Name%5D.%0D%0A%0D%0AWe%20are%20reaching%20out%20to%20discuss%20a%20potential%20opportunity%20in%20%5BProduct%20Leadership%20%2F%20Operations%20Management%5D.%0D%0A%0D%0AWould%20you%20be%20open%20to%20a%20brief%20call%20to%20discuss%20the%20role%20details%20this%20week%3F%0D%0A%0D%0AThanks%2C%0D%0A%5BRecruiter%27s%20Name%5D%0D%0A%5BRecruiter%27s%20Phone%20Number%5D" 
+                        id="contact-btn-hero"
+                        class="px-8 py-4 border-2 border-gray-800 font-semibold rounded-lg hover:border-blue-500 transition flex items-center justify-center shadow-md hover:shadow-lg"
+                    >
+                        GET IN TOUCH
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="border-y border-gray-800 py-16 px-6 transition-colors duration-300" id="stats-section">
+            <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="flex justify-center mb-4">
+                        <div class="w-16 h-16 rounded-2xl bg-blue-600/20 flex items-center justify-center">
+                            <svg class="w-8 h-8 text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                        </div>
+                    </div>
+                    <div class="text-4xl font-bold text-blue-500 mb-2">10+</div>
+                    <div id="stat-1" class="text-sm text-gray-400 font-mono uppercase">Years Experience</div>
+                </div>
+                <div>
+                    <div class="flex justify-center mb-4">
+                        <div class="w-16 h-16 rounded-2xl bg-blue-600/20 flex items-center justify-center">
+                            <svg class="w-8 h-8 text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                        </div>
+                    </div>
+                    <div class="text-4xl font-bold text-blue-500 mb-2">60%</div>
+                    <div id="stat-2" class="text-sm text-gray-400 font-mono uppercase">Efficiency Gains</div>
+                </div>
+                <div>
+                    <div class="flex justify-center mb-4">
+                        <div class="w-16 h-16 rounded-2xl bg-blue-600/20 flex items-center justify-center">
+                            <svg class="w-8 h-8 text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg>
+                        </div>
+                    </div>
+                    <div class="text-4xl font-bold text-blue-500 mb-2">B2C+B2B</div>
+                    <div id="stat-3" class="text-sm text-gray-400 font-mono uppercase">Growth Models</div>
+                </div>
+                <div>
+                    <div class="flex justify-center mb-4">
+                        <div class="w-16 h-16 rounded-2xl bg-blue-600/20 flex items-center justify-center">
+                            <svg class="w-8 h-8 text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                        </div>
+                    </div>
+                    <div class="text-4xl font-bold text-blue-500 mb-2">3</div>
+                    <div id="stat-4" class="text-sm text-gray-400 font-mono uppercase">Major Platforms</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="capabilities" class="py-32 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-16 text-center">
+                    <div class="text-sm font-mono text-gray-400 mb-4 text-blue-500">STRATEGIC DOMAINS</div>
+                    <h2 class="text-5xl font-bold mb-4">Core Capabilities</h2>
+                    <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+                        Bridging Strategy, Technology, and Operations for Measurable Growth
+                    </p>
+                </div>
+                <div id="capabilities-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    </div>
+            </div>
+        </section>
+
+        <section id="work" class="py-32 px-6 bg-gray-900/30 transition-colors duration-300" id="projects-section">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-16 text-center">
+                    <div class="text-sm font-mono text-gray-400 mb-4 text-blue-500">SELECTED PROJECTS</div>
+                    <h2 class="text-5xl font-bold">Case Studies</h2>
+                </div>
+                <div id="projects-list" class="space-y-12">
+                    </div>
+                <div class="mt-12 text-center">
+                    <a href="#contact" class="inline-flex items-center gap-2 text-sm font-mono text-gray-400 hover:text-blue-500 transition">
+                        VIEW DETAILED CASE STUDIES
+                        <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="py-32 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-16 text-center">
+                    <div class="text-sm font-mono text-gray-400 mb-4 text-blue-500">PROFESSIONAL JOURNEY</div>
+                    <h2 class="text-5xl font-bold">Professional Experience</h2>
+                </div>
+                <div id="experience-list" class="space-y-12">
+                    </div>
+            </div>
+        </section>
+        
+        <section id="skills" class="py-32 px-6 bg-gray-900/30 transition-colors duration-300">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-16 text-center">
+                    <div class="text-sm font-mono text-gray-400 mb-4 text-blue-500">CORE COMPETENCIES</div>
+                    <h2 class="text-5xl font-bold">Skills & Technology</h2>
+                </div>
+                <div id="skills-grid" class="grid md:grid-cols-2 gap-16">
+                    </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-32 px-6 transition-colors duration-300" id="contact-section">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="text-sm font-mono text-gray-400 mb-6 text-blue-500">LET'S CONNECT</div>
+                <h2 class="text-5xl font-bold mb-8">
+                    Ready to Build
+                    <br />
+                    <span class="text-blue-500">Something Great</span>
+                </h2>
+                
+                <p class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+                    Open to roles in product leadership, operations, and growth across e-commerce, on-demand, and logistics platforms. 
+                    Based in Saudi Arabia, available immediately.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                    <a 
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=sal.mukhrish@gmail.com&su=Inquiry%3A%20Product%20%2F%20Operations%20Role%20at%20%5BCompany%20Name%5D&body=Hi%20Saleh%2C%0D%0A%0D%0AI%20am%20a%20%5BJob%20Title%2C%20e.g.%2C%20Talent%20Acquisition%20Specialist%5D%20at%20%5BCompany%20Name%5D.%0D%0A%0D%0AWe%20are%20reaching%20out%20to%20discuss%20a%20potential%20opportunity%20in%20%5BProduct%20Leadership%20%2F%20Operations%20Management%5D.%0D%0A%0D%0AWould%20you%20be%20open%20to%20a%20brief%20call%20to%20discuss%20the%20role%20details%20this%20week%3F%0D%0A%0D%0AThanks%2C%0D%0A%5BRecruiter%27s%20Name%5D%0D%0A%5BRecruiter%27s%20Phone%20Number%5D"
+                        class="px-8 py-4 bg-white text-black font-semibold rounded-lg hover:opacity-80 transition flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
+                    >
+                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        Send an Email
+                    </a>
+                    <a 
+                        href="tel:+966555018628"
+                        id="call-btn-contact"
+                        class="px-8 py-4 border-2 border-gray-800 font-semibold rounded-lg hover:border-blue-500 transition flex items-center justify-center gap-2 shadow-md hover:shadow-lg"
+                    >
+                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 3.08 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        Call Me Directly
+                    </a>
+                </div>
+
+                <div class="flex flex-wrap gap-6 justify-center text-sm text-gray-400">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Saudi Arabia
+                    </div>
+                    <a href="https://www.linkedin.com/in/sal-mukhrish/" target="_blank" class="flex items-center gap-2 hover:text-blue-500 transition">
+                        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                        LinkedIn Profile
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="border-t border-gray-800 py-8 px-6 transition-colors duration-300">
+            <div class="max-w-7xl mx-auto text-center text-sm text-gray-400 font-mono">
+                <p>© 2025 Saleh S. Mukhrish · Product & Operations Lead  · Saudi Arabia & GCC Markets</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Data arrays for the portfolio content
+        const data = {
+            experience: [
+                {
+                    company: 'Coffee Building Trading Co LLC',
+                    displayName: 'CoffeeHub',
+                    role: 'Product Manager & Operations & Growth Lead',
+                    period: '2020 - 2025',
+                    location: 'Saudi Arabia',
+                    highlights: [
+                        'Directed end-to-end product lifecycle: research, roadmap, MVP launch, and continuous improvement.',
+                        'Managed cross-functional teams (design, engineering, marketing) to build high-performing logistics and marketplace features.',
+                        'Drove operational efficiency initiatives, cutting fulfillment time by 60% through partner optimization.',
+                        'Built low-CAC growth programs, leveraging organic acquisition and referral loops.',
+                        'Architected customer loyalty and retention systems, increasing repeat purchase frequency.',
+                        'Implemented data-driven performance tracking (CAC, LTV, retention, AOV, SLA metrics).',
+                        'Developed process playbooks covering vendor onboarding, logistics coordination, and quality assurance.',
+                        'Analyzed user behavior data to optimize conversion funnels and identify growth opportunities',
+                        'Created seasonal campaign strategies to capture peak periods and high-margin product sales.',
+                        
+
+                    ]
+                },
+                {
+                    company: 'Chef S. Diet Food',
+                    displayName: 'Chef S. Diet Food',
+                    role: 'Owner & Operations Manager',
+                    period: '2018 - 2020',
+                    location: 'Saudi Arabia',
+                    highlights: [
+                        'Managed full operations for F&B business, reducing waste by 15% through process improvements',
+                        'Trained and led a team of 5, implementing customer retention strategies'
+                    ]
+                },
+                {
+                    company: 'Build Muscle Store',
+                    displayName: 'Build Muscle Store',
+                    role: 'Founder & E-Commerce Manager',
+                    period: '2014 - 2017',
+                    location: 'Saudi Arabia',
+                    highlights: [
+                        'Launched online fitness retail store, sourcing international suppliers and executing digital marketing campaigns'
+                    ]
+                },
+                {
+                    company: '',
+                    displayName: '',
+                    role: '',
+                    period: '',
+                    location: '',
+                    highlights: [
+                        ''
+                    ]
+                },
+                {
+                    company: '',
+                    displayName: '',
+                    role: '',
+                    period: '',
+                    location: '',
+                    highlights: [
+                        '',
+                        ''
+                    ]
+                }
+            ],
+            projects: [
+                {
+                    title: 'CoffeeHub Platform',
+                    period: '2020 - 2025',
+                    tags: ['On-Demand', 'Marketplace', 'B2C/B2B', 'D2C/O2O'],
+                    description: 'Led the product and operational development of CoffeeHub — a full-cycle on-demand delivery platform connecting customers, specialty coffee vendors, and logistics partners across Saudi Arabia.',
+                    achievements: [
+                        'Built a three-sided marketplace (customer app, partner dashboard, and delivery system) enabling seamless coordination.',
+                        'Implemented real-time tracking, route optimization, and automated dispatch algorithms',
+                        'Designed loyalty system with repeat purchase incentives and referral mechanics',
+                        'Developed B2B API integrations to support corporate orders and white-label delivery partnerships.',
+                        'Established analytics infrastructure for performance monitoring and data-driven decision making',
+                        'Integrated CRM, payment gateways, and marketing platforms for unified data flow and user insight.',
+                        'Optimized supply-side operations improving service partner efficiency and SLA compliance'
+                    ]
+                },
+                {
+                    title: 'Masar+ (National HR Innovation)',
+                    period: '2023 - 2024',
+                    tags: ['HR Tech', 'AI/ML', 'Government Platform', 'Vision 2030'],
+                    description: 'Designed comprehensive employment innovation platform submitted to Saudi HR Ministry as national-level solution for transforming job market dynamics, aligned with Vision 2030 initiatives.',
+                    achievements: [
+                        'Architected multi-portal system serving candidates, employers, training providers, and government stakeholders',
+                        'Built AI-powered system for rejection reason clustering, skill gap inference, and training recommendations',
+                        'Designed smart CV builder with skill profiling, achievement badges, and progress tracking',
+                        'Created company portal for candidate filtering by skills, certifications, and development status',
+                        'Developed government analytics dashboard tracking market trends, skill shortages, and program impact',
+                        'Integrated training provider marketplace with certification mapping and automated completion notifications',
+                        'Implemented event-based notification engine with smart reminders and multi-channel alerts',
+                        'Focused on reducing unemployment through structured upskilling and strategic re-hiring pathways'
+                    ]
+                },
+                {
+                    title: 'Anjezli Gig Platform',
+                    period: '2023 - 2024',
+                    tags: ['Gig Economy', 'Marketplace', 'Product Strategy'],
+                    description: 'Led product strategy and market validation for gig economy platform targeting Saudi Arabia\'s growing freelance market. Conducted comprehensive market research and MVP development.',
+                    achievements: [
+                        'Designed platform architecture for work-based freelance work with secure payment systems',
+                        'Conducted extensive user research and competitive analysis across $29.7B addressable market',
+                        'Developed product roadmap prioritizing core marketplace features and trust-building mechanisms',
+                        'Created UX flows for task posting, bidding, delivery, and payment processing'
+                    ]
+                }
+            ],
+            capabilities: [
+                {
+                    icon: 'Database',
+                    title: 'Platform Architecture',
+                    items: ['On-Demand Platforms', 'Marketplace & Retail Systems', 'API & Third-Party Integrations', 'D2C/B2B Models', 'O2O (Online-to-Offline) Integration']
+                },
+                {
+                    icon: 'TrendingUp',
+                    title: 'Growth & Optimization',
+                    items: ['CAC/LTV Optimization', 'Conversion Funnel Analysis', 'Retention Loop Design', 'A/B Testing & Iteration', 'Revenue Stream Expansion']
+                },
+                {
+                    icon: 'Users',
+                    title: 'Customer Experience',
+                    items: ['User Research & Validation', 'Customer Journey Mapping', 'Loyalty Program Architecture', 'Churn Reduction & Winback', 'Personalization Strategy']
+                },
+                {
+                    icon: 'TrendingUp',
+                    title: 'Technical Leadership',
+                    items: ['Modern Tech Stack (React, Tailwind)', 'API Integration', 'Third-Party Platform Selection', 'Scalable Infrastructure', 'Agile/Scrum Management']
+                },
+                {
+                    icon: 'Database',
+                    title: 'Operations Excellence',
+                    items: ['Fulfillment & Supply Chain Optimization', 'SLA Compliance & Partner Performance', 'Process Automation', 'Vendor & Network Management', 'Data-Driven Decision Systems']
+                },
+                {
+                    icon: 'BarChart3',
+                    title: 'Analytics & Leadership',
+                    items: ['KPI & Dashboard Design', 'Behavioral Insights', 'Agile/Scrum Management', 'Team Enablement & Cross-Functional Alignment', 'Business Intelligence for Product & Ops']
+                }
+            ],
+            // NEW DATA FOR SKILLS SECTION
+            skills: [
+                {
+                    category: 'Skills',
+                    subCategories: [
+                        {
+                            title: 'CORE PRODUCT SKILLS',
+                            tags: ['Product Lifecycle Management', 'E-Commerce Operations', 'Cross-Functional Leadership', 'User Research', 'Market Validation', 'Agile Roadmapping']
+                        },
+                        {
+                            title: 'GROWTH STRATEGY',
+                            tags: ['CAC/LTV Optimization', 'A/B Testing', 'Conversion Optimization', 'Retention Strategy', 'Growth Loops', 'Customer Acquisition']
+                        },
+                        {
+                            title: 'TECHNICAL ANALYTICAL',
+                            tags: ['API Integration', 'Third-Party Platforms', 'Data Analytics', 'Tech Stack Selection', 'KPI Dashboards', 'Product Documentation']
+                        },
+                        {
+                            title: 'OPERATIONAL EXCELLENCE',
+                            tags: ['Supply Chain Optimization', 'Fulfillment Operations', 'SLA Management', 'Process Automation', 'Vendor Management', 'Quality Assurance']
+                        },
+                    ]
+                },
+                {
+                    category: 'Technology',
+                    subCategories: [
+                        {
+                            title: 'FRONTEND',
+                            tags: ['React', 'Tailwind CSS', 'Responsive Design', 'Component Architecture']
+                        },
+                        {
+                            title: 'BACKEND',
+                            tags: ['API Design', 'Database Architecture', 'Real-time Systems', 'Scalable Infrastructure']
+                        },
+                        {
+                            title: 'TOOLS',
+                            tags: ['JIRA', 'Notion', 'Mixpanel', 'Figma', 'Analytics Platforms', 'Zapier' , 'Tally']
+                        },
+                        {
+                            title: 'METHODOLOGIES',
+                            tags: ['Agile/Scrum', 'Lean Startup', 'Design Thinking', 'RICE/ICE Prioritization']
+                        },
+                    ]
+                }
+            ]
+        };
+
+        // Lucide SVG Icons mapping for repetitive elements
+        const ICON_SVGS = {
+            Layers: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 18-8-4-4 4 8 4 8-4-4-4-4 4-8-4Z"/><path d="m16 4-8 4-4-4 8-4 8 4 4 4-8 4-4-4-4 4-8 4-4-4 8-4 8 4-4 4-4 4-8 4-4 4-4 4-8 4Z"/><path d="m20 18-8 4-4-4 8-4 8 4Z"/></svg>`,
+            TrendingUp: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 10.5 12.5 5.5 17.5"/><path d="M18 7h4v4"/></svg>`,
+            Users: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+            GitBranch: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" x2="6" y1="3" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 0-9 9"/></svg>`,
+            Database: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12h18"/><path d="M3 19h18"/></svg>`,
+            BarChart3: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>`,
+        };
+
+        const getIcon = (name) => {
+            const svg = ICON_SVGS[name] || '';
+            // MODIFIED: Return the STATS icon style structure
+            return `
+                <div class="flex justify-start mb-4">
+                    <div class="w-12 h-12 rounded-lg bg-blue-600/20 flex items-center justify-center">
+                        <div class="w-6 h-6 text-blue-500">${svg}</div>
+                    </div>
+                </div>
+            `;
+        };
+
+        // NEW: Function to render tag spans with screenshot style
+        const renderTags = (tags, borderClass, tagBgClass) => {
+            // Apply the dark background from the screenshot and font-mono from original style
+            const baseTagClasses = 'inline-block text-sm px-4 py-2 font-mono rounded-lg transition'; 
+            return tags.map(tag => `
+                <span class="${baseTagClasses} ${darkMode ? 'bg-gray-800 border-transparent text-gray-200' : 'bg-gray-200 border-gray-300 text-gray-800'}">
+                    ${tag}
+                </span>
+            `).join('');
+        };
+
+
+        let darkMode = true; // Start in dark mode
+
+        // Elements
+        const body = document.body;
+        const themeToggle = document.getElementById('theme-toggle');
+        const sunIcon = document.getElementById('sun-icon');
+        const moonIcon = document.getElementById('moon-icon');
+        const greetingText = document.getElementById('greeting-text');
+        const currentTimeEl = document.getElementById('current-time');
+        const currentDateEl = document.getElementById('current-date');
+        
+        // Dynamic class names based on state
+        const updateClasses = () => {
+            const bgClass = darkMode ? 'bg-black' : 'bg-white';
+            const textClass = darkMode ? 'text-white' : 'text-gray-900';
+            const secondaryTextClass = darkMode ? 'text-gray-400' : 'text-gray-600';
+            const borderClass = darkMode ? 'border-gray-800' : 'border-gray-200';
+            const cardBgClass = darkMode ? 'bg-gray-900/70' : 'bg-gray-100';
+            const projectBgClass = darkMode ? 'bg-gray-900/30' : 'bg-gray-50'; // Also used for the new skills section
+            const hoverBorderClass = darkMode ? 'hover:border-blue-500' : 'hover:border-blue-600';
+            const buttonBgClass = darkMode ? 'bg-white text-black' : 'bg-black text-white';
+            const headerBgClass = darkMode ? 'bg-black/80' : 'bg-white/80';
+
+            // Apply classes to body
+            body.className = `min-h-screen ${bgClass} ${textClass} transition-colors duration-300 ${darkMode ? 'dark-mode' : ''}`;
+
+            // Apply classes to main header
+            const header = document.getElementById('main-header');
+            header.className = `fixed top-0 w-full ${headerBgClass} backdrop-blur-md border-b ${borderClass} z-50 transition-colors duration-300`;
+
+            // Apply classes to interactive elements
+            document.querySelectorAll('#theme-toggle, #contact-btn-hero, #call-btn-contact').forEach(el => {
+                const isToggle = el.id === 'theme-toggle';
+                const baseClasses = isToggle ? 'p-2 rounded-lg transition' : 'px-8 py-4 border-2 font-semibold rounded-lg transition flex items-center justify-center gap-2 shadow-md hover:shadow-lg';
+                el.className = `${baseClasses} ${darkMode ? 'bg-gray-900 border-gray-800' : 'bg-gray-50 border-gray-200'} ${hoverBorderClass}`;
+            });
+            document.querySelector('.bg-white.text-black.font-semibold').className = `px-8 py-4 ${buttonBgClass} font-semibold rounded-lg hover:opacity-80 transition flex items-center justify-center gap-2 shadow-lg hover:shadow-xl`;
+
+
+            // Update icons visibility
+            if (darkMode) {
+                sunIcon.classList.add('hidden');
+                moonIcon.classList.remove('hidden');
+            } else {
+                sunIcon.classList.remove('hidden');
+                moonIcon.classList.add('hidden');
+            }
+            
+            // Re-render sections with new card colors/borders
+            document.querySelectorAll('#greeting-banner, #availability-badge, #stats-section, #contact-section, #projects-section, #skills').forEach(el => {
+                if (el.id === 'projects-section' || el.id === 'contact-section' || el.id === 'skills') {
+                    // NOTE: contact-section used to have its own class set in the HTML.
+                    // To follow the original structure, I will check the ID to see if it should have the bg color.
+                    // The new skills section and the projects section should have the background color.
+                    // The original HTML had the contact section with the bg-gray-900/30.
+                    const isBgSection = (el.id === 'projects-section' || el.id === 'contact-section' || el.id === 'skills');
+                    el.className = `py-32 px-6 ${isBgSection ? projectBgClass : ''} transition-colors duration-300`;
+                } else {
+                    el.className = el.className.replace(/border-(gray-800|gray-200)/g, borderClass);
+                }
+            });
+
+            document.querySelectorAll('#capabilities-grid > div, #projects-list > div').forEach(card => {
+                const baseClasses = 'rounded-xl p-8 transition';
+                card.className = `${baseClasses} border ${borderClass} ${cardBgClass} ${hoverBorderClass}`;
+            });
+            
+            document.querySelectorAll('#experience-list > div').forEach(job => {
+                const baseClasses = 'border-l-4 pl-8 transition';
+                job.className = `${baseClasses} ${darkMode ? 'border-gray-800' : 'border-gray-300'} hover:border-blue-500`;
+            });
+        };
+
+        const toggleDarkMode = () => {
+            darkMode = !darkMode;
+            localStorage.setItem('darkMode', darkMode);
+            updateClasses();
+            // Re-render to update inner colors/borders of injected content
+            renderDynamicContent(); 
+        };
+
+        // Time and Greeting Logic
+        const updateTimeAndGreeting = () => {
+            const now = new Date();
+            const hour = now.getHours();
+            let greeting = 'Good Evening';
+
+            if (hour < 12) { 
+                greeting = 'Good Morning';
+            } else if (hour < 17) {
+                greeting = 'Good Afternoon';
+            }
+
+            const timeOptions = { timeZone: 'Asia/Riyadh', hour12: true, hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            const dateOptions = { timeZone: 'Asia/Riyadh', weekday: 'long' };
+
+            const timeString = now.toLocaleTimeString('en-US', timeOptions);
+            const dateString = now.toLocaleDateString('en-US', dateOptions);
+
+            if (greetingText) {
+                greetingText.textContent = greeting;
+            }
+            if (currentTimeEl) {
+                currentTimeEl.textContent = timeString;
+            }
+            if (currentDateEl) {
+                currentDateEl.innerHTML = `GMT+3 • ${dateString}`;
+            }
+        };
+
+        // Dynamic Content Rendering
+        const renderDynamicContent = () => {
+            const secondaryTextClass = darkMode ? 'text-gray-400' : 'text-gray-600';
+            const borderClass = darkMode ? 'border-gray-800' : 'border-gray-200';
+            const cardBgClass = darkMode ? 'bg-gray-900/70' : 'bg-gray-100';
+            const hoverBorderClass = darkMode ? 'hover:border-blue-500' : 'hover:border-blue-600';
+            const tagBgClass = darkMode ? 'bg-black' : 'bg-white';
+
+            // --- 1. Capabilities (Updated to use Stat style icons) ---
+            const capabilitiesGrid = document.getElementById('capabilities-grid');
+            if (capabilitiesGrid) {
+                capabilitiesGrid.innerHTML = data.capabilities.map(cap => `
+                    <div class="border ${borderClass} ${cardBgClass} rounded-xl p-8 ${hoverBorderClass} transition">
+                        ${getIcon(cap.icon)}
+                        <h3 class="text-xl font-bold mb-4">${cap.title}</h3>
+                        <ul class="space-y-2">
+                            ${cap.items.map(item => `
+                                <li class="text-sm ${secondaryTextClass} flex items-start gap-2">
+                                    <span class="text-blue-500 mt-1 text-lg">•</span>
+                                    ${item}
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                `).join('');
+            }
+
+
+            // --- 2. Projects ---
+            const projectsList = document.getElementById('projects-list');
+            if (projectsList) {
+                projectsList.innerHTML = data.projects.map(project => `
+                    <div class="border ${borderClass} ${cardBgClass} rounded-xl p-8 ${hoverBorderClass} transition">
+                        <div class="flex flex-wrap justify-between items-start mb-6">
+                            <div>
+                                <h3 class="text-3xl font-bold mb-2">${project.title}</h3>
+                                <div class="text-sm ${secondaryTextClass} font-mono mb-4">${project.period}</div>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mt-2 sm:mt-0">
+                                ${project.tags.map(tag => `
+                                    <span class="text-xs px-3 py-1 ${tagBgClass} border ${borderClass} rounded font-mono">
+                                        ${tag}
+                                    </span>
+                                `).join('')}
+                            </div>
+                        </div>
+                        
+                        <p class="${secondaryTextClass} mb-6 leading-relaxed text-lg">${project.description}</p>
+                        
+                        <div class="space-y-2">
+                            ${project.achievements.map(achievement => `
+                                <div class="flex gap-3">
+                                    <span class="text-blue-500 mt-1">→</span>
+                                    <span class="${secondaryTextClass}">${achievement}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            // --- 3. Experience ---
+            const experienceList = document.getElementById('experience-list');
+            if (experienceList) {
+                const jobBorderClass = darkMode ? 'border-gray-800' : 'border-gray-300';
+                experienceList.innerHTML = data.experience.map(job => `
+                    <div class="border-l-4 ${jobBorderClass} pl-8 hover:border-blue-500 transition">
+                        <div class="flex flex-wrap justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-1">${job.displayName}</h3>
+                                <div class="text-lg text-blue-500 mb-2">${job.role}</div>
+                            </div>
+                            <div class="text-sm font-mono ${secondaryTextClass} mt-2 sm:mt-0">
+                                ${job.period} · ${job.location}
+                            </div>
+                        </div>
+                        
+                        <ul class="space-y-2">
+                            ${job.highlights.map(highlight => `
+                                <li class="flex gap-3">
+                                    <span class="text-blue-500 mt-1">▸</span>
+                                    <span class="${secondaryTextClass}">${highlight}</span>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                `).join('');
+            }
+
+            // --- 4. Skills & Technology (NEW) ---
+            const skillsGrid = document.getElementById('skills-grid');
+            if (skillsGrid) {
+                skillsGrid.innerHTML = data.skills.map(column => `
+                    <div>
+                        <h3 class="text-4xl font-bold mb-10">${column.category}</h3>
+                        ${column.subCategories.map(subCat => `
+                            <div class="mb-12">
+                                <div class="text-sm font-mono text-gray-400 mb-4 tracking-widest">${subCat.title}</div>
+                                <div class="flex flex-wrap gap-3">
+                                    ${renderTags(subCat.tags, borderClass, tagBgClass)}
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                `).join('');
+            }
+        };
+
+        // Initialization
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Load dark mode preference from localStorage or default to true
+            const savedMode = localStorage.getItem('darkMode');
+            if (savedMode !== null) {
+                darkMode = savedMode === 'true';
+            }
+
+            // 2. Set up event listeners
+            themeToggle.addEventListener('click', toggleDarkMode);
+
+            // 3. Initial state and continuous time update
+            updateTimeAndGreeting();
+            setInterval(updateTimeAndGreeting, 1000);
+
+            // 4. Apply initial classes and render content
+            updateClasses();
+            renderDynamicContent();
+        });
+
+    </script>
+</body>
+</html>
